@@ -1,0 +1,87 @@
+const input = document.getElementById("result");
+
+//객체 원형
+class Button {
+  constructor(width_in = 1, type_in, color_in) {
+    this.width = width_in * 32.6666;
+    this.type = type_in;
+    this.color = color_in;
+  }
+}
+//숫자 버튼
+class NumberButton extends Button {
+  constructor() {
+    super(1, "number", "#5c5e63");
+  }
+}
+NumberButton.prototype.Func = function (value_in) {
+  input.value = input.value + value_in;
+};
+//부호 버튼
+class SignButton extends Button {
+  constructor() {
+    super(1, "sign", "#fe9327");
+  }
+}
+SignButton.prototype.Func = function (value_in) {
+  input.value = input.value + value_in;
+};
+//결과 버튼
+class ResultButton extends Button {
+  constructor() {
+    super(2, "result", "#fe9327");
+  }
+}
+ResultButton.prototype.Func = function () {
+  const inputValue = input.value;
+  let result = eval(inputValue);
+  input.value = result;
+};
+
+//버튼 동적할당
+const numberButton = new NumberButton();
+const signButton = new SignButton();
+const resultButton = new ResultButton();
+
+const wrapper = document.querySelector(".calculator_wrapper");
+
+const buttons = document.querySelectorAll("button");
+for (let i = 0; i < buttons.length; i++) {
+  if (buttons[i].innerText >= 0 || buttons[i].innerText <= 9) {
+    buttons[i].style.background = numberButton.color;
+    buttons[i].style.width = numberButton.width + "%";
+    buttons[i].classList.add(numberButton.type + "_btn");
+  } else if (
+    buttons[i].innerText === "+" ||
+    buttons[i].innerText === "-" ||
+    buttons[i].innerText === "*" ||
+    buttons[i].innerText === "/"
+  ) {
+    buttons[i].style.background = signButton.color;
+    buttons[i].style.width = signButton.width + "%";
+    buttons[i].classList.add(signButton.type + "_btn");
+  } else {
+    buttons[i].style.background = resultButton.color;
+    buttons[i].style.width = resultButton.width + "%";
+    buttons[i].classList.add(resultButton.type + "_btn");
+  }
+}
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (btn.classList.contains(numberButton.type + "_btn"))
+      numberButton.Func(btn.innerText);
+    else if (btn.classList.contains(signButton.type + "_btn"))
+      signButton.Func(btn.innerText);
+    else resultButton.Func();
+  });
+});
+
+function calculate() {
+  const inputValue = input.value;
+  let result = eval(inputValue);
+  input.value = result;
+}
+
+// wrapper.append(numberBtn);
