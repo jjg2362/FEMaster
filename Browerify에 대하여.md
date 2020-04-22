@@ -14,7 +14,7 @@ Browerify는 Module Bundler다. 기존에 하나의 파일로 관리되었던 js
 
 ### 왜 Browerify?
 
-이렇게 분할된 js파일을 하나로 만들어내는 일을 해내는 Module Bundler가 더 있습니다. 매우 유명한 Webpack입니다. Webpack을 쓰지 않고 Browserify를 선택하여 이번 과제를 진행한 이유는 Webpack을 사용하기 이전 가장 간단하고, 기본에 충실한 기능을 갖추고 있는 Browerify를 사용하여 Module Bundler에 대한 감각을 기르기 위해서 입니다.
+이렇게 분할된 js파일을 하나로 만들어내는 일을 해내는 유명한 Module Bundler가 있다. Webpack이다. Webpack을 쓰지 않고 Browserify를 선택하여 이번 과제를 진행한 이유는 Webpack을 사용하기 이전 가장 간단하고, 기본에 충실한 기능을 갖추고 있는 Browerify를 사용하여 Module Bundler에 대한 감각을 기르기 위해서다.
 
 
 
