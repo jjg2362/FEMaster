@@ -113,7 +113,7 @@ onMount함수가 실행되면 먼저 인자로 NavBar 클래스의 element를 �
 
 event의 내장함수인 stopPropagation은 이름 그대로 요소의 영역이 확장되는 것을 막는다. 이 코드를 추가하여 실행하면 정상적으로 실행된다.
 
-<img src="https://user-images.githubusercontent.com/6447355/79945867-b937c200-84a9-11ea-93f5-8381c3d5dd22.gif />
+<img src="https://user-images.githubusercontent.com/6447355/79945867-b937c200-84a9-11ea-93f5-8381c3d5dd22.gif" />
 
 
 ### 정리
