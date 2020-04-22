@@ -109,12 +109,11 @@ onMount함수가 실행되면 먼저 인자로 NavBar 클래스의 element를 �
 
 이 후 요소들에 대한 클릭 이벤트 처리를 하는데 문제가 발생했다. 클릭 이벤트가 발생하면 isActive값을 변경하고 isActive가 true면 자식요소를 보이게, false면 자식요소를 보이지 않게 처리해야하는데 자식요소의 display가 block이 되면 부모요소의 영역이 자식영역만큼 차지해 자식요소에 대한 클릭이벤트가 정삭적으로 작동하지 않는 문제였다.
 
-https://user-images.githubusercontent.com/6447355/79945857-b6d56800-84a9-11ea-9a26-381b43ae47f2.gif
+<img src="https://user-images.githubusercontent.com/6447355/79945857-b6d56800-84a9-11ea-9a26-381b43ae47f2.gif" />
 
 event의 내장함수인 stopPropagation은 이름 그대로 요소의 영역이 확장되는 것을 막는다. 이 코드를 추가하여 실행하면 정상적으로 실행된다.
 
-https://user-images.githubusercontent.com/6447355/79945867-b937c200-84a9-11ea-93f5-8381c3d5dd22.gif
-
+<img src="https://user-images.githubusercontent.com/6447355/79945867-b937c200-84a9-11ea-93f5-8381c3d5dd22.gif />
 
 
 ### 정리
