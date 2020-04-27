@@ -1,0 +1,183 @@
+body {
+  background-color: #fafafa;
+}
+
+#header {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #dbdbdb;
+  background-color: #fff;
+}
+#posts {
+  width: 100%;
+}
+#story {
+  width: 100%;
+}
+
+.container {
+  width: 1080px;
+  margin: 0 auto;
+}
+.row {
+  padding: 0 24px;
+}
+
+/* 헤더 영역 */
+.header {
+  position: relative;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo img {
+  height: 30px;
+}
+
+.header .search input {
+  height: 25px;
+  width: 180px;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.header ul.icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.header ul.icons li {
+  font-size: 24px;
+  margin-right: 25px;
+}
+
+.header ul.icons li:last-child {
+  margin: 0;
+}
+
+/* 스토리 영역 */
+.story {
+  border: 1px solid #dbdbdb;
+  border-top: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow-x: scroll;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.story .story_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.story .story_item .picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.story .story_item .name {
+  display: inline-block;
+  max-width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 게시글 영역 */
+.post_hidden {
+  display: none;
+}
+.post_list {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 700px;
+}
+.post {
+  border: 1px solid #dbdbdb;
+  background-color: #fff;
+  margin-top: 20px;
+}
+.post .post_title {
+  display: flex;
+  min-height: 55px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.post .post_title .user_profile {
+  display: flex;
+  align-items: center;
+}
+.post .post_title .user_profile img {
+  max-height: 40px;
+  border-radius: 50%;
+}
+.post .post_title .user_profile .user_name {
+  font-weight: 700;
+  font-size: 15px;
+  margin-left: 10px;
+}
+.post .post_title .more i {
+  font-size: 15px;
+}
+
+.post .post_picture img {
+  max-height: 600px;
+  width: 100%;
+}
+
+.post .post_content {
+  padding: 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.post .post_content .information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post .post_content .information ul.icons {
+  display: flex;
+}
+.post .post_content .information ul.icons li {
+  margin-right: 15px;
+  font-size: 25px;
+}
+.post .post_content .information .bookmark i {
+  font-size: 18px;
+}
+.post .post_content .likes {
+}
+.post .post_content .user_name {
+  padding-right: 5px;
+}
+.post .post_content .content {
+}
+
+.post .post_comments {
+  padding: 14px;
+}
+
+.post .post_comments .user_name {
+  padding-right: 5px;
+}
+
+@media (max-width: 1080px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header .search {
+    display: none;
+  }
+}
